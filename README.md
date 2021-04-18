@@ -1,10 +1,10 @@
 # SIMPLE SHOP MADE USING NODE.JS
 
-I want to share simple Node.js shop project made in 2018. It is the first BIG project for me that I have done while still learning Node.js. 
+I want to share simple Node.js shop project made in 2018. It is the first BIG project for me that I have done while still learning Node.js. I have done the whole process from research to deployment. 
 
 ## Overview
 ---
-This Node.js shop is built with help of Express, Passport, Handlebars, MongoDB(mongoose) and Stripe. Throughout this project I have implemented login system, mailing/contact form, cart, managing orders, Stripe Payments and it also has abilities to add, delete, modify following: 
+This Node.js shop is built with help of Express, Passport, Handlebars, MongoDB(mongoose), Bootstrap and Stripe. Throughout this project I have implemented login system, mailing/contact form, cart, managing orders, Stripe Payments and it also has abilities to add, delete, modify following: 
 
 * Products
 * Users
