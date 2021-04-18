@@ -1,0 +1,81 @@
+{
+    "modalSearch": {
+        "title": "Suche",
+        "input": "Suchwort",
+        "search": "Suche",
+        "close": "Schliessen"
+    },
+    "menu": {
+        "title": "Navigation",
+        "home": "Home",
+        "about": "Ueber mich",
+        "shop": "Meine Kollektion",
+        "cart": "Warenkorb",
+        "contact": "Kontakt",
+        "english": "Englisch",
+        "germany": "Deutsch",
+        "bosnian": "Bosnisch/Kroatisch/Serbisch",
+        "hours": "Arbeitszeit",
+        "days": "Montag - Freitag",
+        "social": "Folgen Sie mir",
+        "pay": "Bezahlen mit",
+        "copyright": "Copyright ©2019 - Alle Rechte vorbehalten. Web by - <a href=\"https://www.belminmuslimovic.com\">Belmin Muslimović</a>"
+    },
+    "index": {
+        "title": "Homepage - meine handgemachten Sachen",
+        "shopbtn": "Durch Kollektion stoebern",
+        "about": "Ueber uns",
+        "viewbtn": "Mehr",
+        "new": "Neue Artikel",
+        "rec": "Neueste Artikel",
+        "shopgo": "Meine Kleider....",
+        "others": "Was sagen andere Uber meine Nahkunst?"
+    },
+    "shop": {
+        "intro": "Viel Spass beim Stoebern",
+        "notfound": "Artikel nicht gefunden"
+    },
+    "contact": {
+        "intro": "Kontaktaufnahme erbeten",
+        "subtitle": "Kontaktformular - Information",
+        "name": "Ihr Vor- und Nachname",
+        "email": "Ihre Emailadresse",
+        "message": "Ihre Nachricht an uns",
+        "submit": "Senden"
+    },
+    "product": {
+        "intro": "Details über die Herstellung ",
+        "size": "Groessee",
+        "color": "Farbe",
+        "price": "Preis: ",
+        "addtocart": "In den Warenkorb",
+        "ship": "Gratis Zustellung"
+    },
+    "cart": {
+        "intro": "Ihre Produkten",
+        "prod": "Artikel",
+        "size": "Groessee",
+        "price": "Preis",
+        "qty": "Menge",
+        "amm": "Summe",
+        "total": "Gesamt",
+        "continue": "Einkaufen fortsetzen",
+        "checkout": "Kaufen",
+        "empty": "Warenkorb ist leer",
+        "goshop": "Gehe zu Meine Kollektion",
+        "added": "Artikel wurde in den Warenkorb gelegt"
+    },
+    "buy": {
+        "name": "Ihr Vor- und Nachname",
+        "address": "Ihre Adresse",
+        "number": "Ihre Telefonnummer (inkl. Vorwahl)",
+        "mail": "Ihre Email-Adresse",
+        "nameoncard": "Kartenbesitzer",
+        "cardno": "Nummer auf der Karte",
+        "cvc": "CVC",
+        "expiration": "EXP",
+        "checkout": "Zahlen »",
+        "total": "Gesamt",
+        "success": "Artikel erfolgreich gekauft"
+    }
+}

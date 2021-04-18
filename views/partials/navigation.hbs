@@ -1,0 +1,98 @@
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+   <div class="modal-content">
+      <div class="modal-header text-center">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel" data-localize="modalSearch.title">Search</h4>
+      </div>
+      <form class="navbar-form navbar-left" method="POST" action="search">
+        <div class="modal-body">
+            <div class="form-group">
+                <input type="text" class="form-control" name="searchString" data-localize="modalSearch.input" placeholder="Type to search...">
+            </div>
+        </div>
+        <div class="modal-footer" style="text-align:center !important">
+            <button type="submit" class="btn btn-primary" data-localize="modalSearch.search">Search</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal" data-localize="modalSearch.close">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<nav class="navbar mainNavigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navContent" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fas fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="#">SHOP</a>
+
+            <div class="nav-icon-basic hidden-lg" style="text-align:center;">
+              {{!--  <a href="/shopping-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    {{#if session.cart}} -
+                            <span class="numberOfArticels">{{session.cart.totalQty}}</span>
+                    {{/if}}
+                </a> --}}
+                <button type="button" class="btn btn-primary searchModal" data-toggle="modal" data-target=".bs-example-modal-sm">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div> 
+        </div>
+
+        <div class="collapse navbar-collapse" id="navContent">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="/" data-localize="menu.home">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/about" data-localize="menu.about">About</a>
+                </li>
+                <li>
+                    <a href="/shop" data-localize="menu.shop">Shop</a>
+                </li>
+                 {{!-- <li class="hidden-lg hidden-md hidden-sm">
+                    <a href="/shopping-cart" data-localize="menu.cart">Cart</a>
+                </li> --}}
+                <li>
+                    <a href="/contact" data-localize="menu.contact">Contact</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <form class="navbar-form navbar-left" method="POST" action="search">
+                    <button type="submit" class="btn btn-default">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="searchString" data-localize="modalSearch.search" placeholder="Type to search...">
+                    </div>
+                </form>
+                {{!-- <li class="cart">
+                    <a href="/shopping-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span data-localize="menu.cart">Cart </span>
+                        {{#if session.cart}} -
+                            <span class="numberOfArticles">{{session.cart.totalQty}}</span>
+                        {{/if}}
+                    </a>
+                </li> --}}
+                {{!-- <li class="language">
+                    <a href="#" data-localize="menu.english" class="en-lang">English</a> /
+                    <a href="#" data-localize="menu.bosnian" class="ba-lang">Bosnian</a> /
+                    <a href="#" data-localize="menu.germany" class="de-lang">German</a>
+                </li> --}}
+       
+                {{!-- <select class="lang-menu hidden-xs">
+                    <option value="EN">EN</option>
+                    <option value="BA">BA</option>
+                    <option value="DE">DE</option>
+                </select> --}}
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>

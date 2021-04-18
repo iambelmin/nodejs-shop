@@ -1,0 +1,77 @@
+
+<div id="modal-for-product-fullscreen"></div>
+    <section class="introHead">
+        <h1 data-localize="product.intro">PRODUCT DETAILS</h1>
+    </section>
+
+    <div class="container sliderprod">
+        <div class="row">
+            {{#each productDetails}}
+            <div class="col-md-6">
+                <div id="carousel-custom" class="carousel slide" data-ride="carousel">
+                    <div class="row">
+                         
+                        <div class="col-md-9">
+                            <div class="carousel-outer"> 
+                                <div class="carousel-inner ">
+                                    {{#each this.imagePaths }}
+                                        <div class="item {{#if @first}}active{{/if}}">
+                                            <img src="/{{this}}" alt="Product">
+                                        </div>
+                                    {{/each}}
+                                </div>
+
+                                <a class="left carousel-control" href="#carousel-custom" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a> 
+                                <a class="right carousel-control" href="#carousel-custom" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a> 
+                            </div>
+                        </div>
+                        <div class="col-md-2 hidden-xs hidden-sm">   
+                            <ol class="carousel-indicators custom-scrollbars">
+                                {{#each this.imagePaths }}
+                                    <li data-target="#carousel-custom" data-slide-to="{{@index}}" class="{{#if @first}}active{{/if}}"><img src="/{{this}}" alt=""></li>
+                                {{/each}}
+                               
+                            </ol>
+                        </div>
+                        <div class="col-md-1"></div>
+        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 product-details">
+                <h1>{{this.title}} - <span>{{this.category}}</span></h1>
+                {{#if this.price}}
+                    <p>{{this.description}}</p>
+                {{/if}}
+                <div class="options">
+                {{!-- <form action="/add-to-cart/" method="POST"> --}}
+                    <input type="hidden" value="{{this._id}}" name="id">
+                    <label for="sizes" data-localize="product.size">Sizes:</label>
+                    <select id="sizes" name="sizes">
+                        {{#each this.size}}
+                            <option value="{{this}}">{{this}}</option>
+                        {{/each}}
+                    </select>
+                    <label for="color" data-localize="product.color">Color:</label>
+                    <select name="color" id="color">
+                        {{#each this.color}}
+                            <option value="{{this}}">{{this}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                 {{#if this.price}}
+                   <h1 class="price"><em data-localize="product.price">PRICE</em> {{this.price}}€</h1>
+                  {{/if}}
+                <div class="bottom">
+                   {{!-- <button type="submit"><span data-localize="product.addtocart">Add to cart</span> - <span class="priceJ">{{this.price}}</span>€</button> --}}
+
+                {{!-- </form> --}}
+                    {{#if this.isFreeShipping}}
+                        <p class="shipping" data-localize="product.ship">FREE SHIPPING!</p>
+                    {{/if}} 
+                </div> 
+            {{/each}}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,87 @@
+<div class="row">
+    <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
+        <div id="success" class="alert alert-success text-center" data-localize="buy.success" {{#if noMessage}}hidden{{/if}}>
+            {{successMsg}}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
+        <div id="success" class="alert alert-danger text-center" {{#if noErrMessage}}hidden{{/if}}>
+            {{errMessage}}
+        </div>
+    </div>
+</div>
+
+<header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 hidden-sm hidden-xs"></div>
+            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                <div class="content">
+                    <h1 data-localize="index.title">Online webshop for handmade crafts!</h1>
+                    <button type="button">
+                        <a href="/shop" data-localize="index.shopbtn">Explore our shop</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="about-us">
+    <div class="row">
+        <div class="col-lg-5 col-md-5">
+            <img src="images/profile.jpg" alt="Profile">
+        </div>
+        <div class="col-lg-7 col-md-7">
+            <div class="content">
+                <h1 data-localize="index.about">About</h1>
+                {{# each items.abouts}}
+                    <p>{{this.text}}</p>
+                {{/each}}
+                
+                <button type="button">
+                    <a href="/about" data-localize="index.viewbtn">View more</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="new-arrivals">
+    <h1 class="head" data-localize="index.new">New arrivals</h1>
+    <p class="head" data-localize="index.rec">The most recent products</p>
+
+    <div class="row">
+        {{# each items.products}}
+            <div class="col-lg-3 col-md-6 product">
+            <div class="image">
+                <img src="{{this.mainImagePath}}" alt="Product image">
+                <div class="hover">
+                    <a href="shop/product/{{this.id}}" data-localize="index.viewbtn">View more</a>
+                </div>
+            </div>
+            <h3>{{this.title}}</h3>
+            <p>€ <span class="priceJ">{{this.price}}</span></p>
+        </div>
+        {{/each}}
+    </div>
+    <button type="button">
+        <a href="/shop" data-localize="index.shopgo">Go to shop</a>
+    </button>
+</section>
+<section id="testimonials">
+    <h1 class="head" data-localize="index.others">testimonials</h1>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            
+                {{# each items.testimonials}}
+                        <p class="text">"{{this.text}}" - {{this.author}}</p>
+                {{/each}}
+            
+        </div>
+
+        <!-- Controls -->
+    </div>
+</section>

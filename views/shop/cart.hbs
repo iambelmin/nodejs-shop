@@ -1,0 +1,84 @@
+{{#if products}}
+    <section class="introHead">
+        <h1 data-localize="cart.intro">PRODUCTS YOU WANT TO BUY</h1>
+    </section>
+    <div class="container">
+    <table id="cart" class="table table-responsive">
+        <thead>
+            <tr class="names">
+                <th style="width:50%" data-localize="cart.prod">Product</th>
+                <th style="width:10%" data-localize="cart.size" class="text-center hidden-xs">Size</th>
+                <th style="width:10%" data-localize="cart.price" class="text-right hidden-xs">Price</th>
+                <th style="width:15%" data-localize="cart.qty" class="text-right">Quantity</th>
+                <th style="width:10%" data-localize="cart.amm" class="text-right">Amount</th>
+                <th style="width:5%"></th>
+            </tr>
+        </thead>
+        <tbody>
+                        {{# each products}}
+            <tr class="item">
+                <td data-th="Product">
+                    <div class="row">
+
+                            
+                        <div class="col-sm-3 hidden-xs">
+                            <img src="{{this.item.mainImagePath}}"
+                                alt="Product image" class="img-product img-responsive img-rounded" />
+                        </div>
+                        <div class="col-sm-9">
+                            <span>&nbsp;</span>
+                            <h4 class="nomargin hidden-xs">{{this.item.category}}</h4>
+                            <p>{{this.item.title}}</br>
+                            You have ordered: {{this.colorSize}}</p>
+                        </div>
+                    </div>
+                </td>
+                <td data-th="Size" class="text-center hidden-xs">{{this.size}}</td>
+                <td data-th="Price" class="text-right hidden-xs">{{this.item.price}}€</td>
+                <td data-th="Quantity" class="text-right">
+                    {{this.qty}}
+                </td>
+                <td data-th="Subtotal" class="text-right">{{this.price}}€</td>
+                <td class="actions" data-th="">
+                    <a href="/remove/{{this.item._id}}">
+                        <button class="btn btn-default btn-sm">
+                            <i class="far fa-trash-alt"></i>
+                        </button>
+                    </a>
+                </td>
+            </tr>
+                {{/each}}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td class="hidden-xs" colspan="2"></td>
+                <td class="text-right" data-localize="cart.total">Total</td>
+                <td class="text-right">
+                    <strong>{{totalPrice}} €</strong>
+                </td>
+                <td></td>
+            </tr>
+            <tr class="no-border">
+                <td>
+                    <a href="/shop" class="btn btn-default ">
+                        <i class="fa fa-angle-left"></i> <span data-localize="cart.continue">Continue Shopping</span></a>
+                </td>
+                <td colspan="2" class="hidden-xs"></td>
+                <td></td>
+                <td colspan="2">
+                    <a href="/checkout" class="btn btn-default btn-block"><span data-localize="cart.checkout">Checkout</span>
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+    </div>
+{{ else }}
+    <div class="row">
+        <p>&nbsp;</p>
+        <h1 class="text-center" data-localize="cart.empty">You have no items in cart <br></h1>
+        <h1 class="text-center"><a href="/shop" data-localize="cart.goshop">Go to shop!</a></h1>
+    </div>
+{{/if}}

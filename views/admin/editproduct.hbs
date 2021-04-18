@@ -1,0 +1,129 @@
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Node webshop admin panel</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+        <li><a href="/admin/logout">Logout</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href="/admin/main">Orders</a></li>
+            <li class="active"><a href="/admin/products">Products <span class="sr-only">(current)</span></a></li>
+            <li><a href="/admin/testimonials">Testimonials</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="/admin/categories">Categories</a></li>
+            <li><a href="/admin/colors">Colors</a></li>
+            <li><a href="/admin/sizes">Sizes</a></li>
+            <li><a href="/admin/about">About</a></li>
+            <li><a href="/admin/users">Admin users</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+          <h2 class="sub-header">Add products</h2>
+
+        
+          <form action="/admin/saveprod" method="POST" enctype="multipart/form-data">
+
+              <div class='form-group col-xs-4'>
+                <label class='control-label'>Title:</label>
+                <input class='form-control' required name="title" value="{{resultsID.title}}">
+              </div>
+              <div class='form-group col-xs-4'>
+                <label class='control-label'>Description:</label>
+                <input class='form-control' required name="desc" value="{{resultsID.description}}">
+              </div>
+               <div class='form-group col-xs-4'>
+                <label class='control-label'>Price (€):</label>
+                <input class='form-control' type="number"  name="price" value="{{resultsID.price}}">
+              </div>
+              <div class='form-group col-xs-4'>
+                 <label class='control-label'>Category:</label>
+                  <select id="cat" name="cat">
+                    {{#each results.categories}}
+                    {{#equal "category" this.categoryName}}
+                        <option value="{{this.categoryName}}" selected>{{this.categoryName}}</option>
+                        {{else}}
+                        <option value="{{this.categoryName}}">{{this.categoryName}}</option>
+                      {{/equal}}
+                    {{/each}}
+                  </select>
+
+              </div>
+              <div class='form-group col-xs-4'>
+                 <label class='control-label'>Sizes:</label>
+                  {{#each results.sizes}} 
+                  
+                  {{#equal "size" this.sizeMark}}
+                     <input type="checkbox" value="{{this.sizeMark}}" checked name="size"> {{this.sizeMark}}
+                  {{else}}
+                     <input type="checkbox" value="{{this.sizeMark}}"  name="size"> {{this.sizeMark}}
+                  {{/equal}}
+                  {{/each}}
+
+              </div>
+               <div class='form-group col-xs-4'>
+                 <label class='colors-label'>Color:</label>
+                 {{#each results.colors}} 
+                     {{#equal "color" this.colorName}}
+                     <input type="checkbox" value="{{this.colorName}}" checked name="color"> {{this.colorName}}
+                  {{else}}
+                     <input type="checkbox" value="{{this.colorName}}"  name="color"> {{this.colorName}}
+                  {{/equal}}
+                  {{/each}}
+              </div>
+                <label class='control-label'>Free shipping?:</label>
+                {{#if resultsID.isFreeShipping}}
+                <input type="checkbox" name="freeShipping" value="yes" checked> YES
+                {{else}}
+                <input type="checkbox" name="freeShipping" value="yes"> YES
+                {{/if}}
+                <input type="hidden" name="id" value="{{resultsID._id}}">
+            <div class="row">
+            <div class="col-xs-6 col-md-3 " >
+                <br><br>
+                <h4>Main image:</h4>
+                <div class="thumbnail">
+                  <img src="/{{resultsID.mainImagePath}}" alt="Product thumbnail">
+                </div>
+
+                <label class='control-label'>Upload new main image:</label>
+                <input type="file" name="mainImage" value="{{results.mainImagePath}}"><br>
+            </div>
+            <br><br>
+              <h4>Other images:</h4>
+              <div class="col-xs-3 " >
+
+                {{#each resultsID.imagePaths}}
+                  <div class="thumbnail">
+                    <img src="/{{this}}" alt="Product thumbnail">
+                  </div>
+                  {{/each}}
+              </div>
+
+              <label class='control-label'>Upload new other images:</label>
+              <input type="file" name="images" multiple value="{{results.imagePaths}}"><br>
+              </div>
+             <br>
+             <button type="submit" class="btn btn-success">Save</button>
+          </form>
+        </div>
+      </div>
+    </div>

@@ -1,0 +1,67 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Node webshop admin panel</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+        <li><a href="/admin/logout">Logout</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href="/admin/main">Orders</a></li>
+            <li class="active"><a href="/admin/products">Products <span class="sr-only">(current)</span></a></li>
+            <li><a href="/admin/testimonials">Testimonials</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="/admin/categories">Categories</a></li>
+            <li><a href="/admin/colors">Colors</a></li>
+            <li><a href="/admin/sizes">Sizes</a></li>
+            <li><a href="/admin/about">About</a></li>
+            <li><a href="/admin/users">Admin users</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+          <h2 class="sub-header">Products</h2>
+          <div class="btn-group" role="group" aria-label="...">
+            <a href="/admin/addProducts"><button type="button" class="btn btn-success">Add new product</button></a>
+          </div>
+          <div class="row">
+              <br>
+              {{#each results}}
+            <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                <img src="/{{this.mainImagePath}}" alt="Product thumbnail">
+                <div class="caption">
+                    <h3>{{this.title}}</h3>
+                    <p>{{this.description}} <br><br><br>Price: {{this.price}} € | Category: {{this.category}} {{#if this.isFreeShipping}}| Free shipping{{/if}}</p>
+                    <p><a href="deleteproduct/{{this.id}}" class="btn btn-danger" onclick="return confirm('Do you want to delete product ?')" role="button">Delete</a></p>
+                    <p><a href="editProduct/{{this.id}}" class="btn btn-success" role="button">Edit</a></p>
+                </div>
+                </div>
+            </div>
+            {{/each}}
+             {{#unless results}}
+                  <div class="alert alert-danger text-center">
+                    <p>THERE ARE NO PRODUCTS!!!</p>
+                 </div>
+            {{/unless}}
+          </div>
+          
+
+        </div>
+      </div>
+    </div>

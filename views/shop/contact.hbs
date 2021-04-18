@@ -1,0 +1,14 @@
+<section class="introHead">
+    <h1 data-localize="contact.intro">FEEL FREE TO CONTACT US</h1>
+</section>
+<section class="contactInfo">
+    <h1 data-localize="contact.subtitle">CONTACT FORM/INFO</h1>
+    <p> 0000 000 000 / Linz 7732</p>
+    {{msg}}
+    <form action="/contact/send" method="POST">
+        <input type="text" name="name" data-localize="contact.name" placeholder="Enter full name here..." required>
+        <input type="email" name="email" data-localize="contact.email" placeholder="Enter your e-mail here.." required>
+        <textarea name="message" id="" cols="30" rows="1" data-localize="contact.message" placeholder="Enter your message here..." required></textarea>
+        <button type="submit" data-localize="contact.submit">Send</button>
+    </form>
+</section>

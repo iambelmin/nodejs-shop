@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Node Webshop - Handmade crafts</title>
+        <meta name="description" content="Type something to get better CTR">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="/icon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|Josefin+Sans" rel="stylesheet">
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+    </head>
+    <body>
+        <div class="preloader"></div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>
+            $(window).load(function() {
+                $('.preloader').fadeOut('slow');
+                $('body').css('overflow', 'visible');
+            });
+        </script>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+        {{> navigation}}
+        {{{body}}}
+        {{> footer}}
+        <!-- Add your site or application content here -->
+        <script src="/javascripts/modernizr-3.5.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="/javascripts/jquery.localize.min.js"></script>
+        <script src="/javascripts/js.cookie.js"></script>
+        <script src="/javascripts/web.app.js"></script>
+    </body>
+        
+</html>

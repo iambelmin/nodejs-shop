@@ -1,0 +1,81 @@
+{
+    "modalSearch": {
+        "title": "Traži",
+        "input": "Upiši ključnu riječ da pretražuješ",
+        "search": "Traži",
+        "close": "Zatvori"
+    },
+    "menu": {
+        "title": "Navigacija",
+        "home": "Početna",
+        "about": "O meni",
+        "shop": "Prodavnica",
+        "cart": "Korpa",
+        "contact": "Kontakt",
+        "english": "Engleski",
+        "germany": "Njemački",
+        "bosnian": "Bosanski",
+        "hours": "Radni sati",
+        "days": "Ponedjeljak-Petak",
+        "social": "Pratite nas",
+        "pay": "Plati sa",
+        "copyright": "Copyright © 2018 - Sva prava zadržana. Razvoj stranice - <a href=\"http://www.belminmuslimovic.com\">Belmin Muslimović</a>"
+    },
+    "index": {
+        "title": "Node online prodavnica za njene rukotvorine!",
+        "shopbtn": "Istraži našu prodavnicu",
+        "about": "O nama",
+        "viewbtn": "Vidi više",
+        "new": "Novi artikli",
+        "rec": "Najnoviji artikli iz naše prodavnice",
+        "shopgo": "Idi na shop",
+        "others": "Drugi o nama"
+    },
+    "shop": {
+        "intro": "UŽIVAJTE U KUPNJI",
+        "notfound": "Nije pronađen artikal"
+    },
+    "contact": {
+        "intro": "SLOBODNO NAS KONTAKTIRAJTE",
+        "subtitle": "KONTAKT FORMA/INFO",
+        "name": "Upišite Vaše ime i prezime",
+        "email": "Upišite Vašu e-mail adresu",
+        "message": "Upišite Vašu poruku",
+        "submit": "Pošalji"
+    },
+    "product": {
+        "intro": "DETALJI PROIZVODA",
+        "size": "Veličina",
+        "color": "Boja",
+        "price": "CIJENA: ",
+        "addtocart": "Dodaj u korpu",
+        "ship": "Besplatna dostava!"
+    },
+    "cart": {
+        "intro": "PROIZVODI KOJE ŽELITE KUPITI",
+        "prod": "Proizvod",
+        "size": "Veličina",
+        "price": "Cijena",
+        "qty": "Količina",
+        "amm": "Iznos",
+        "total": "Ukupno",
+        "continue": "Nastavi kupovinu",
+        "checkout": "Kupi",
+        "empty": "Nemate proizvoda u Vašoj korpi",
+        "goshop": "Idite na shop",
+        "added": "Proizvod je dodan u korpu"
+    },
+    "buy": {
+        "name": "Vaše ime i prezime",
+        "address": "Vaša adresa",
+        "mail": "Vaša E-mail adresa",
+        "number": "Vaš telefonski broj",
+        "nameoncard": "Ime na kartici",
+        "cardno": "Broj kartice",
+        "cvc": "CVC",
+        "expiration": "EXP",
+        "checkout": "Plati »",
+        "total": "Ukupno",
+        "success": "Proizvodi uspješno kupljeni - kontaktirat ćemo Vas putem Vašeg e-maila ili mobitela."
+    }
+}

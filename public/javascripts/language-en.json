@@ -1,0 +1,81 @@
+{
+    "modalSearch": {
+        "title": "Search",
+        "input": "Type to search",
+        "search": "Search",
+        "close": "Close"
+    },
+    "menu": {
+        "title": "Navigation",
+        "home": "Home",
+        "about": "About",
+        "shop": "Shop",
+        "cart": "Cart",
+        "contact": "Contact",
+        "english": "English",
+        "germany": "German",
+        "bosnian": "Bosnian",
+        "hours": "Working hours",
+        "days": "Monday-Friday",
+        "social": "Social media",
+        "pay": "Pay with",
+        "copyright": "Copyright © 2018 - All rights reserved. Developed by - <a href=\"http://www.belminmuslimovic.com\">Belmin Muslimović</a>"
+    },
+    "index": {
+        "title": "Node ONLINE WEBSHOP FOR HER HANDMADE CRAFTS",
+        "shopbtn": "Explore our shop",
+        "about": "About Us",
+        "viewbtn": "View more",
+        "new": "NEW ARRIVALS",
+        "rec": "The most recent products",
+        "shopgo": "Go to shop",
+        "others": "TESTIMONIALS"
+    },
+    "shop": {
+        "intro": "HAPPY SHOPPING!",
+        "notfound": "NONE OF THE PRODUCTS FOUND HERE"
+    },
+    "contact": {
+        "intro": "FEEL FREE TO CONTACT US",
+        "subtitle": "CONTACT FORM/INFO",
+        "name": "Enter full name here",
+        "email": "Enter your e-mail here",
+        "message": "Enter your message here",
+        "submit": "Send"
+    },
+    "product": {
+        "intro": "PRODUCT DETAILS",
+        "size": "Sizes",
+        "color": "Color",
+        "price": "PRICE: ",
+        "addtocart": "Add to cart",
+        "ship": "FREE SHIPPING"
+    },
+    "cart": {
+        "intro": "PRODUCTS YOU WANT TO BUY",
+        "prod": "PRODUCT",
+        "size": "SIZE",
+        "price": "Price",
+        "qty": "QUANTITY",
+        "amm": "AMOUNT",
+        "total": "Total",
+        "continue": "Continue shopping",
+        "checkout": "Checkout",
+        "empty": "You have no items in cart",
+        "goshop": "Go to shop!",
+        "added": "Product is added to cart!"
+    },
+    "buy": {
+        "name": "Name",
+        "address": "Address",
+        "mail": "Your e-mail address",
+        "number": "Phone number",
+        "nameoncard": "Name on card",
+        "cardno": "Card number",
+        "cvc": "CVC",
+        "expiration": "Expiration",
+        "checkout": "Pay »",
+        "total": "Total",
+        "success": "Successfully bought product! We will contact you through your e-mail address or by phone number"
+    }
+}
